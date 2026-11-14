@@ -31,9 +31,7 @@ Amplify.configure(
   }
 );
 
-const client = generateClient<Schema>({
-  authMode: "iam",
-});
+const client = generateClient<Schema>({ authMode: "iam" });
 
 export const handler: PostConfirmationTriggerHandler = async (event) => {
   await client.graphql({
